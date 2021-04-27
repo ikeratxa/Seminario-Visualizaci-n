@@ -1,1 +1,31 @@
-<div id="app"></div>
+<head>
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/d3plus/1.9.2/d3plus.full.min.js"></script>
+</head>
+
+<h1>Visualización – Seminario </h1>
+Nombre: Iker Atxa Untiedt<br>
+URL: <a href="https://js-zbpqau.stackblitz.io">https://js-zbpqau.stackblitz.io</a>
+
+<h2>Qué se quiere transmitir</h2>
+El fútbol es el deporte rey por excelencia, ningún otro deporte en el mundo tiene tantos seguidores, jugadores y ningún otro crea tantos trabajos de forma directa e indirecta. Que el fútbol mueva los números que mueve actualmente provoca el sector que se modernice y los equipos empleen todos sus recursos para lograr los mejores resultados. Hoy en día es muy común ver equipos que cuentan con un departamento de datos en los que se analiza toda la información recogida para tomar las mejores decisiones, desde qué esquema jugar contra un determinado rival hasta predecir las lesiones que pueden tener los jugadores.<p>
+
+A lo largo de este trabajo voy a mostrar con el uso de diferentes visualizaciones realizadas sobre una simlpe pero extensa base de datos qué tipo de información se puede sacar de un dataset de este estilo. A diferencia de lo que pretenden los clubes profesionales con su estudio de datos, la información que se va a mostrar a continuación está dirigida a todo el público en general, a entretenimiento y a la investigación de curiosidades en el ámbito de los partidos de selecciones y no a lograr una ventaja sobre ningún tipo de rival.<p>
+
+<h2>Qué nos vaomos a encontrar</h2>
+A lo largo de la historia del fútbol se han jugado muchos partidos internacionales de selecciones, 42.084 para ser preciso. El primero se jugó en noviembre de 1872 y fue un enfrentamiento entre la selección de Escocia y la de Inglaterra, mientras que el último que se recoge en la base de datos se trata de un Leichtestein contra Islandia y se jugó en marzo de 2021. Todos estos partidos se han recogido en un dataset en el que se incluía las selecciones que se enfrentaban, los goles que marcó cada uno de los equipos, la ciudad, el país y el día en el que se jugó el partido, el tipo de torneo del que se trataba este partido (incluyendo incluso los enfrentamientos amistosos) y si uno de los equipos estaba jugando en su país. Tras un proceso de limpieza de datos he decidido mostrar la información más interesante que se recoge aquí de una manera visual.
+
+<h2>Limpieza de la base de datos</h2>
+Con el fin de sacar visualizaciones más interesantes y que puedan aportar información extra he realizado los siguientes cambios en el dataset:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; -	He añadido una nueva columna que diga si el partido ha sido una victoria, un empate o una derrota. Todo desde el punto de vista del equipo local.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; -	He modificado el campo de fecha. Desde un punto de vista analítico no es tan determinante la fecha exacta, sin embargo si puede ser útil conocer el mes y/o el año en el que se jugaron los partidos.<br> 
+&nbsp;&nbsp;&nbsp;&nbsp; -	He añadido el campo continente. Para ello he filtrado los partidos según los diferentes países en los que se han jugado para sacar en qué continente de los 7 se han disputado los partidos.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; -	He creado un campo llamado “relación entre local” para ver si hay algún tipo de relación directa entre jugar en casa y el resultado final. En el dataset podemos encontrar 4 valores diferentes, el 0 es que no se jugó en ninguno de los países de los participantes, el 1 que se jugó en uno de esos países y el equipo local perdió, el 2 que se jugó en unos de esos países y el partido acabó en empate y, por último, el 3 indica que se jugó en uno de esos países y el equipo local se hizo con la victoria.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; -	He realizado una limpieza de los datos, tanto de formato como de campos en los que faltara información. He modificado los países extintos (como por ejemplo Yugoslavia o Unión Soviética) para poder visualizar los datos con información actualizada.<p><br><br><br><br>
+
+<h2>VISUALIZACIONES</h2>
+<h3>Partidos según tipo</h3>
+<iframe width="881" height="472" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRQ3BLhX4D8hGYyuuF5d-P24p_quWIaUy9bsQo-yg7pdBJiFuyoZE7IiiJ9mPE8IXxme9l4-nXV4l-U/pubchart?oid=300876550&amp;format=interactive"></iframe><p>
+Cuando pensamos en una competición internacional de países automáticamente pensamos en el mundial de fútbol pero, ¿la mayoría de partidos que se han jugado han sido de mundiales? Como es lógico, la mayoría de partidos jugados han sido amistosos, ocupando casí la mitad de todos los partidos. <p>
+<iframe src="http://localhost:4848/single/?appid=C%3A%5CUsers%5CIker%5CDocuments%5CQlik%5CSense%5CApps%5CVisualizacion.qvf&obj=nUwDq&opt=ctxmenu,currsel&select=clearall" style="border:none;width:100%;height:100%;"></iframe>
